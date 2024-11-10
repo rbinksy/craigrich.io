@@ -9,9 +9,6 @@ interface Props {
 
 const { title, date } = Astro.props;
 
-let lightStart = new Color("lab(63 59.32 -1.47)");
-let lightEnd = new Color("lab(33 42.09 -43.19)");
-let lightRange = lightStart.range(lightEnd);
 let today = new Date();
 let timeSinceFirstPost = (
   today.valueOf() - new Date(2018, 10, 30).valueOf()
@@ -23,7 +20,7 @@ let staleness = timeSinceThisPost / timeSinceFirstPost;
 <h2
   class="text-[28px] font-black text-[--lightLink] dark:text-[--darkLink] font-['Inter']"
   style={{
-    "--lightLink": lightRange(staleness).toString(),
+    "--lightLink": "#4755dd",
     "--darkLink": "#98c7f6",
   }}
 >

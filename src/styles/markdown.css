@@ -5,7 +5,7 @@
   --radius-bottom: 12px;
   --padding-top: 1rem;
   --padding-bottom: 1rem;
-  --link: #98c7f6;
+  /* --link: #98c7f6; */
 }
 
 .markdown p {
@@ -14,6 +14,8 @@
 
 .markdown a {
   @apply text-[--link];
+
+  /* 3544D6   */
 }
 
 .markdown hr {
