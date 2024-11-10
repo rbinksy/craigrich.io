@@ -15,7 +15,7 @@ import playformInline from "@playform/inline";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://craigrich.pages.dev",
+  site: "https://craigrich.io",
   integrations: [tailwind(), react(), mdx(), icon(), playformInline()],
   image: {
     domains: ["https://github.com"],
