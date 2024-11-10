@@ -24,6 +24,7 @@
     "astro": "^4.16.10",
     "astro-icon": "^1.1.2",
     "astro-loading-indicator": "^0.6.0",
+    "astro-robots-txt": "^1.0.0",
     "colorjs.io": "^0.5.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
