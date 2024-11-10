@@ -13,7 +13,7 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astro-blog-x2sw.vercel.app",
+  site: "https://craigrich.io",
   integrations: [tailwind(), react(), mdx(), icon()],
   image: {
     domains: ["https://github.com"],

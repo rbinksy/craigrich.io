@@ -12,9 +12,6 @@ const { title, date } = Astro.props;
 let lightStart = new Color("lab(63 59.32 -1.47)");
 let lightEnd = new Color("lab(33 42.09 -43.19)");
 let lightRange = lightStart.range(lightEnd);
-let darkStart = new Color("lab(81 -7.02 -32.36)");
-let darkEnd = new Color("lab(78 -5.97 -39.97)");
-let darkRange = darkStart.range(darkEnd);
 let today = new Date();
 let timeSinceFirstPost = (
   today.valueOf() - new Date(2018, 10, 30).valueOf()

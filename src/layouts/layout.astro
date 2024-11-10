@@ -1,6 +1,9 @@
 ---
-import "@/styles/globals.css";
+import "@fontsource/inter/900.css";
 import "@fontsource/merriweather";
+import "@/styles/globals.css";
+import "@/styles/markdown.css";
+
 import { ViewTransitions } from "astro:transitions";
 import LoadingIndicator from "astro-loading-indicator/component";
 ---
@@ -9,9 +12,18 @@ import LoadingIndicator from "astro-loading-indicator/component";
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Craig" />
+    <link rel="manifest" href="/site.webmanifest" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Craig Richardson-Binks is a product engineer Credit Karma. He writes about technology and thinks about frontend problems at scale."
+    />
     <title>Craig Richardson-Binks</title>
     <ViewTransitions />
     <LoadingIndicator color="#98c7f6" />
