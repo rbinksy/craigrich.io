@@ -9,10 +9,12 @@ import react from "@astrojs/react";
 
 import mdx from "@astrojs/mdx";
 
+import icon from "astro-icon";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://astro-blog-x2sw.vercel.app",
-  integrations: [tailwind(), react(), mdx()],
+  integrations: [tailwind(), react(), mdx(), icon()],
   image: {
     domains: ["https://github.com"],
     remotePatterns: [

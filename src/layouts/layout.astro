@@ -12,11 +12,21 @@ import LoadingIndicator from "astro-loading-indicator/component";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>Craig Richardson-Binks</title>
     <ViewTransitions />
-    <LoadingIndicator color="#7e22ce" />
+    <LoadingIndicator color="#98c7f6" />
   </head>
-  <body class="mx-auto max-w-2xl bg-[--bg] px-5 py-12 text-[--text]">
-    <slot />
+  <body
+    class="mx-auto max-w-2xl bg-[--bg] px-5 pt-12 pb-6 text-[--text] min-h-screen flex flex-col justify-between"
+  >
+    <main class="flex-grow">
+      <slot />
+    </main>
+
+    <hr />
+    <footer class="flex pt-4 gap-1">
+      <div style={{ lineHeight: "28px" }}>&copy;</div>
+      <div>2024</div>
+    </footer>
   </body>
 </html>

@@ -4,15 +4,12 @@ import "@/styles/markdown.css";
 import type { Frontmatter } from "./types";
 import type { MarkdownInstance } from "astro";
 import fs from "node:fs";
-import { getPostWords, readingTime } from "@/utils/utils";
-import "@fontsource/montserrat/900.css";
+import "@fontsource/inter/900.css";
 
 export async function getStaticPaths() {
-  const posts = (await Astro.glob(
-    "../content/posts/**/*.mdx"
-  )) as MarkdownInstance<Frontmatter>[];
+  const posts = await Astro.glob<Frontmatter>("../content/posts/**/*.mdx");
 
-  return posts.map((post) => {
+  return posts.map((post: MarkdownInstance<Frontmatter>) => {
     const fileContent = fs.readFileSync(post.file, { encoding: "utf8" });
 
     return {
@@ -28,15 +25,12 @@ export async function getStaticPaths() {
 }
 
 const { Content, frontmatter } = Astro.props.post;
-const { fileContent } = Astro.props;
-const words = getPostWords(fileContent);
-const readTime = readingTime(words);
 ---
 
 <BlogLayout
   ><article>
     <h1
-      class="text-[40px] font-black leading-[44px] text-[--title] font-['Montserrat']"
+      class="text-[40px] font-black leading-[44px] text-[--title] font-['Inter']"
     >
       {frontmatter.title}
     </h1>
@@ -49,9 +43,9 @@ const readTime = readingTime(words);
         })
       }
     </p>
-  
+
     <div class="markdown mt-10">
       <Content />
     </div>
-  </article></BlogLayout
->
+  </article>
+</BlogLayout>

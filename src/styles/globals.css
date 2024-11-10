@@ -67,3 +67,7 @@
     text-wrap: balance;
   }
 }
+
+hr {
+  @apply pt-8 opacity-60 dark:opacity-10;
+}
