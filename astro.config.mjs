@@ -15,10 +15,12 @@ import playformInline from "@playform/inline";
 
 import robotsTxt from "astro-robots-txt";
 
+import sitemap from "astro-sitemap";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://craigrich.io",
-  integrations: [tailwind(), react(), mdx(), icon(), playformInline(), robotsTxt()],
+  integrations: [tailwind(), react(), mdx(), icon(), playformInline(), robotsTxt(), sitemap()],
   image: {
     domains: ["https://github.com"],
     remotePatterns: [
